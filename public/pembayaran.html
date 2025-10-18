@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Langkah 4/4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    <canvas id="confetti-canvas"></canvas>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="image/UNIMAS-logo.png" alt="Logo" style="height: 40px;">
+        </a>
+    </header>
+
+    <main class="container payment-container">
+        
+        <div id="loading-section">
+            <div class="step-header">LANGKAH 4 DARI 4 : PEMBAYARAN</div>
+            <h2>Anda akan dialihkan ke halaman pembayaran ToyyibPay...</h2>
+            <p>Sila tunggu sebentar.</p>
+            <div class="spinner"></div>
+        </div>
+
+        <div id="success-section" style="display: none;">
+             <div class="success-animation">
+                <div class="checkmark">✔</div>
+                <h2>PEMBAYARAN BERJAYA!</h2>
+            </div>
+            <p>Terima kasih! Pesanan anda telah diterima dan sedang diproses. Resit pembayaran akan dimuat turun.</p>
+            <div class="btn-group" style="justify-content: center;">
+                <button id="download-receipt" class="btn">Muat Turun Resit PDF</button>
+                <a href="index.html" class="btn btn-secondary">Kembali ke Laman Utama</a>
+            </div>
+        </div>
+
+        <div id="failure-section" style="display: none;">
+            <div class="failure-animation" style="color: var(--error-color);">
+                <div class="failmark"><i class="fas fa-times"></i></div>
+                <h2>PEMBAYARAN GAGAL/DIBATALKAN!</h2>
+            </div>
+            <p>Maaf, transaksi pembayaran anda tidak berjaya atau telah dibatalkan. Sila cuba lagi.</p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="semak-pesanan.html" class="btn">Cuba Bayar Semula</a>
+                <a href="index.html" class="btn btn-secondary">Kembali ke Laman Utama</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="copyright-year"></span> Servis Pengambilan Jubah Konvokesyen ke-29 | UNIMAS</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

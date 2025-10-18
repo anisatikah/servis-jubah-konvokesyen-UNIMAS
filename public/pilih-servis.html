@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Servis - Langkah 1/4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="image/UNIMAS-logo.png" alt="Logo" style="height: 40px;">
+        </a>
+    </header>
+
+    <main class="container">
+        <div class="step-header">LANGKAH 1 DARI 4 : PILIH SERVIS</div>
+        <h2>Pilih jenis servis yang anda perlukan:</h2>
+        
+        <form id="service-form">
+            <div class="service-options">
+                <label class="service-option">
+                    <input type="radio" name="service" value="50" data-text="Pengambilan Jubah">
+                    Pengambilan Jubah — RM50.00
+                </label>
+                <label class="service-option">
+                    <input type="radio" name="service" value="50" data-text="Penghantaran Jubah">
+                    Penghantaran Jubah — RM50.00
+                </label>
+                <label class="service-option">
+                    <input type="radio" name="service" value="90" data-text="Pengambilan & Penghantaran Jubah">
+                    Pengambilan & Penghantaran Jubah — RM90.00
+                </label>
+                <label class="service-option">
+                    <input type="radio" name="service" value="65" data-text="Penghantaran Jubah & Pos Transkrip">
+                    Penghantaran Jubah & Pos Transkrip — RM65.00
+                </label>
+                <label class="service-option">
+                    <input type="radio" name="service" value="105" data-text="Pengambilan + Penghantaran Jubah + Pos Transkrip">
+                    Pengambilan + Penghantaran Jubah + Pos Transkrip — RM105.00
+                </label>
+            </div>
+
+            <div class="total-display">
+                TOTAL SEMASA: RM <span id="total-price">0.00</span>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn">Seterusnya → Isi Maklumat</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="copyright-year"></span> Servis Pengambilan Jubah Konvokesyen ke-29 | UNIMAS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
