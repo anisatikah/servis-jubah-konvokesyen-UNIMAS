@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maklumat & Dokumen - Langkah 2/4</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="image/UNIMAS-logo.png" alt="Logo" style="height: 40px;">
+        </a>
+    </header>
+
+    <main class="container">
+        <div class="step-header">LANGKAH 2 DARI 4 : MAKLUMAT DAN DOKUMEN</div>
+        
+        <form id="info-form">
+            <div class="form-group">
+                <label for="full-name">Nama Penuh:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="matric-no">No. Matrik:</label>
+                <input type="text" id="matric-no" name="matric-no" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-no">No. Telefon:</label>
+                <input type="text" id="phone-no" name="phone-no" required>
+            </div>
+            <div class="form-group">
+                <label for="fakulti">Fakulti</label>
+                <select id="fakulti" name="fakulti" required>
+                    <option value="">-- Pilih Fakulti --</option>
+                    <option value="Fakulti Ekonomi dan Perniagaan">Fakulti Ekonomi dan Perniagaan</option>
+                    <option value="Fakulti Kejuruteraan">Fakulti Kejuruteraan</option>
+                    <option value="Fakulti Perubatan dan Sains Kesihatan">Fakulti Perubatan dan Sains Kesihatan</option>
+                    <option value="Fakulti Sains Kognitif dan Pembangunan Manusia">Fakulti Sains Kognitif dan Pembangunan Manusia</option>
+                    <option value="Fakulti Sains Komputer dan Teknologi Maklumat">Fakulti Sains Komputer dan Teknologi Maklumat</option>
+                    <option value="Fakulti Sains Sosial dan Kemanusiaan">Fakulti Sains Sosial dan Kemanusiaan</option>
+                    <option value="Fakulti Sains dan Teknologi Sumber">Fakulti Sains dan Teknologi Sumber</option>
+                    <option value="Fakulti Seni Gunaan dan Kreatif">Fakulti Seni Gunaan dan Kreatif</option>
+                    <option value="Fakulti Bahasa dan Komunikasi">Fakulti Bahasa dan Komunikasi</option>
+                    <option value="Fakulti Alam Bina">Fakulti Alam Bina</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat Penghantaran (Penting untuk pengeposan transkrip):</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="delivery-time">Masa dan Tempat Penghantaran (sebelum hari graduasi):</label>
+                <input type="text" id="delivery-time" name="delivery-time" required>
+            </div>
+
+            <hr style="margin: 2rem 0; border-color: var(--footer-border);">
+
+            <h3>Dokumen Yang Perlu Di Muat Naik</h3>
+            <p>"Sila muat naik dokumen yang diperlukan dalam format PDF."</p>
+            <img src="image/infografik-dokumen.jpg" alt="Infografik Dokumen Diperlukan" style="margin-bottom: 2rem;">
+
+            <div class="form-group">
+                <label>Borang Senarai Semak Peminjaman Jubah (PDF)</label>
+                <div class="file-upload-area" id="upload-1">
+                    <i class="fa-solid fa-paperclip"></i> Seret & lepas fail di sini atau klik untuk muat naik.
+                    <input type="file" name="file1" class="file-input" hidden accept=".pdf">
+                    <span class="tooltip">Hanya format PDF diterima (max 5MB)</span>
+                </div>
+                <div class="upload-status" id="status-1"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Slip Tempahan Slot Peminjaman Jubah (PDF)</label>
+                <div class="file-upload-area" id="upload-2">
+                    <i class="fa-solid fa-paperclip"></i> Seret & lepas fail di sini atau klik untuk muat naik.
+                    <input type="file" name="file2" class="file-input" hidden accept=".pdf">
+                    <span class="tooltip">Hanya format PDF diterima (max 5MB)</span>
+                </div>
+                <div class="upload-status" id="status-2"></div>
+            </div>
+
+            <div class="form-group">
+                <label>SPKG & Surat Pengesahan Alumni (PDF)</label>
+                <div class="file-upload-area" id="upload-3">
+                    <i class="fa-solid fa-paperclip"></i> Seret & lepas fail di sini atau klik untuk muat naik.
+                    <input type="file" name="file3" class="file-input" hidden accept=".pdf">
+                    <span class="tooltip">Hanya format PDF diterima (max 5MB)</span>
+                </div>
+                <div class="upload-status" id="status-3"></div>
+            </div>
+
+            <hr style="margin: 2rem 0; border-color: var(--footer-border);">
+
+            <img src="image/rujukan-surat-kuasa.png" alt="Contoh Surat Kuasa Wakil" style="margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
+            <p style="text-align: center; font-style: italic;">Rujukan: Contoh Surat Kuasa Wakil</p>
+
+            <div class="form-group">
+                <label>Surat Kuasa Wakil Meminjam Pakaian Akademik (PDF)</label>
+                <div class="file-upload-area" id="upload-4">
+                    <i class="fa-solid fa-paperclip"></i> Seret & lepas fail di sini atau klik untuk muat naik.
+                    <input type="file" name="file4" class="file-input" hidden accept=".pdf">
+                    <span class="tooltip">Hanya format PDF diterima (max 5MB)</span>
+                </div>
+                <div class="upload-status" id="status-4"></div>
+            </div>
+
+
+            <div class="btn-group">
+                <button type="submit" class="btn">Semak Maklumat → Page 4</button>
+                <a href="pilih-servis.html" class="btn btn-secondary">Kembali</a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="copyright-year"></span> Servis Pengambilan Jubah Konvokesyen ke-29 | UNIMAS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+
+</body>
+</html>
