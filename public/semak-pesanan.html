@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semak Pesanan - Langkah 3/4</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="image/UNIMAS-logo.png" alt="Logo" style="height: 40px;">
+        </a>
+    </header>
+
+    <main class="container">
+        <div class="step-header">LANGKAH 3 DARI 4 : SEMAK & SAHKAN PESANAN</div>
+        
+        <div class="summary-panel">
+            
+            <div class="summary-section">
+                <h3>
+                    SERVIS DIPILIH
+                    <a href="pilih-servis.html" class="edit-icon"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                </h3>
+                <p id="selected-service">Memuatkan servis...</p>
+            </div>
+            
+            <div class="summary-section">
+                <h3>
+                    MAKLUMAT PERIBADI & PENGHANTARAN
+                    <a href="isi-maklumat.html" class="edit-icon"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                </h3>
+                <ul class="summary-list">
+                    <li>Nama Penuh: <strong id="summary-name">N/A</strong></li>
+                    <li>No. Matrik: <strong id="summary-matric">N/A</strong></li>
+                    <li>No. Telefon: <strong id="summary-phone">N/A</strong></li>
+                    <li>Fakulti: <strong id="summary-fakulti">N/A</strong></li>
+                    <li>Alamat Penghantaran: <strong id="summary-address">N/A</strong></li>
+                    <li>Masa & Tempat Penghantaran: <strong id="summary-delivery">N/A</strong></li>
+                </ul>
+            </div>
+
+            <div class="summary-section">
+                <h3>DOKUMEN DISERTAKAN</h3>
+                <ul class="summary-list" id="uploaded-files">
+                </ul>
+            </div>
+
+            <div class="summary-total">
+                JUMLAH BAYARAN: <span id="final-price">RM 0.00</span>
+            </div>
+        </div>
+
+        <form id="confirmation-form">
+            <div class="confirmation-box">
+                <label>
+                    <input type="checkbox" id="confirm-checkbox" required>
+                    Saya telah semak dan sahkan semua maklumat di atas adalah betul.
+                </label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" id="payment-btn" class="btn" disabled>Teruskan ke Pembayaran</button>
+                <a href="isi-maklumat.html" class="btn btn-secondary">Kembali</a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Servis Pengambilan Jubah Konvokesyen ke-29 | UNIMAS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-functions.js"></script>
+    </body>
+</html>

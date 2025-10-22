@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        .login-container {
+            max-width: 500px; /* Ini mengecilkan kotak login */
+            margin: 4rem auto; /* Menambah jarak dari header */
+        }
+        
+        /* Stail untuk letak ikon dalam input */
+        .input-with-icon {
+            position: relative; 
+        }
+        .input-with-icon i {
+            position: absolute; 
+            left: 18px; /* Jarak ikon dari kiri */
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-gold); 
+            opacity: 0.7;
+        }
+        
+        /* Ubah suai stail input dari style.css khusus untuk halaman ini */
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            padding-left: 50px; /* Anjakkan teks ke kanan untuk beri ruang pada ikon */
+            padding-top: 14px; /* Besarkan sikit input */
+            padding-bottom: 14px;
+        }
+    </style>
+    </head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo-container">
+            <img src="image/UNIMAS-logo.png" alt="Logo UNIMAS" class="logo-img">
+            <span class="event-title">ADMINISTRATOR</span>
+        </a>
+    </header>
+
+    <main class="container login-container">
+        <div class="step-header">LOGIN PENTADBIR</div>
+        <form id="login-form">
+
+            <div class="form-group">
+                <label for="admin-email">Email:</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-user fa-fw"></i>
+                    <input type="email" id="admin-email" required placeholder="admin@unimas.my">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="admin-password">Password:</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-lock fa-fw"></i>
+                    <input type="password" id="admin-password" required placeholder="••••••••">
+                </div>
+            </div>
+            
+            <div id="login-error" style="color: var(--error-color); margin-bottom: 1rem; display: none;">
+                Email atau password salah.
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn">Login</button>
+                <a href="index.html" class="btn btn-secondary">Kembali</a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="copyright-year"></span> Servis Pengambilan Jubah Konvokesyen ke-29 | UNIMAS</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/admin.js"></script> 
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
